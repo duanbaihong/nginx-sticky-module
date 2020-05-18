@@ -10,6 +10,9 @@
 #include <ngx_core.h>
 #include <ngx_http.h>
 #include <ngx_string.h>
+#include <openssl/sha.h>
+#include <openssl/md5.h>
+
 
 typedef ngx_int_t (*ngx_http_sticky_misc_hash_pt)(ngx_pool_t *pool, void *in, size_t len, ngx_str_t *digest);
 typedef ngx_int_t (*ngx_http_sticky_misc_hmac_pt)(ngx_pool_t *pool, void *in, size_t len, ngx_str_t *key, ngx_str_t *digest);
